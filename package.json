@@ -1,4 +1,10 @@
 {
+  "name": "Sick Fits backend",
+  "version": "1.0.0",
+  "description": "Sick Fits backend",
+  "scripts": {
+    "test": "NO test script yet"
+  },
   "dependencies": {
     "dotenv": "^6.2.0",
     "graphql": "^14.0.2",
