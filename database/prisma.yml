@@ -3,4 +3,4 @@ datamodel: datamodel.prisma
 #secret: ${env.PRISMA_SECRET}gi
 hooks:
   post-deploy:
-    - graphql get-schema -p prisma
+    - graphql get-schema # command to generate src/generated/prisma.graphql file every 'prisma deploy'
