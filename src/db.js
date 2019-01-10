@@ -1,5 +1,6 @@
 // This file connects to the remote db 
 // and allows us to query it with JS
+require('dotenv').config({ path: '.env' })
 
 const { Prisma } = require('prisma-binding')
 
