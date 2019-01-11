@@ -12,6 +12,9 @@ function createServer() {
             Mutation,
             Query
         },
+        resolverValidationOptions: {
+            requireResolversForResolveType: false
+        },
         context: req => ({ ...req, db }), // attach db into every req
     })
 }
