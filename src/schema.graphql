@@ -1,3 +1,5 @@
+# This is the public facing API. used by react
+
 # import * from './generated/prisma.graphql'
 
 type Mutation {
