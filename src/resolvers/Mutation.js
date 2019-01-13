@@ -11,6 +11,20 @@ const Mutations = {
         }, info) // info is passed as second arg to make sure that the actual item created is returned
         
         return item
+    },
+    updateItem(parent, args, ctx, info) {
+        // copy the args
+        const updates = { ...args }
+        // remove the ID because we do not want to update the 
+        // id of the item!
+        delete updates.id
+        // run the update method
+        return ctx.db.mutation.updateItem({
+            data: updates,
+            where: {
+                id: args.id
+            },
+        }, info)
     }
 }
 
