@@ -9,7 +9,7 @@ type Mutation {
 }
 
 type Query {
-    items: [Item]! # 'items' can be found inside src/resolvers/Query
+    items(where: ItemWhereInput, orderBy: ItemOrderByInput, skip: Int, first: Int): [Item]! # 'items' can be found inside src/resolvers/Query
     item(where: ItemWhereUniqueInput!): Item
     itemsConnection(where: ItemWhereInput): ItemConnection!
-}
+}                                           
