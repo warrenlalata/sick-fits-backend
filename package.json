@@ -9,6 +9,7 @@
     "test": "NO test script yet"
   },
   "dependencies": {
+    "bcryptjs": "^2.4.3",
     "cookie-parser": "^1.4.3",
     "dotenv": "^6.2.0",
     "graphql": "^14.0.2",
