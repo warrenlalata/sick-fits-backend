@@ -9,6 +9,7 @@
     "test": "NO test script yet"
   },
   "dependencies": {
+    "cookie-parser": "^1.4.3",
     "dotenv": "^6.2.0",
     "graphql": "^14.0.2",
     "graphql-cli": "^3.0.4",
