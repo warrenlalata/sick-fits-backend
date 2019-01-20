@@ -1,6 +1,9 @@
 # This is the public facing API. used by react
 
 # import * from './generated/prisma.graphql'
+type SuccessMessage {
+  message: String
+}
 
 type Mutation {
   createItem(title: String, description: String, image: String, largeImage: String, price: Int): Item!
@@ -8,6 +11,7 @@ type Mutation {
   deleteItem(id: ID!): Item
   signup(email: String!, password: String!, name: String!): User!
   signin(email: String!, password: String!): User!
+  signout: SuccessMessage
 }
 
 type Query {
