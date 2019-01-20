@@ -3,14 +3,15 @@
 # import * from './generated/prisma.graphql'
 
 type Mutation {
-    createItem(title: String, description: String, image: String, largeImage: String, price: Int): Item!
-    updateItem(id: ID!, title: String, description: String, price: Int): Item!
-    deleteItem(id: ID!): Item
-    signup(email: String!, password: String!, name: String!): User!
+  createItem(title: String, description: String, image: String, largeImage: String, price: Int): Item!
+  updateItem(id: ID!, title: String, description: String, price: Int): Item!
+  deleteItem(id: ID!): Item
+  signup(email: String!, password: String!, name: String!): User!
 }
 
 type Query {
-    items(where: ItemWhereInput, orderBy: ItemOrderByInput, skip: Int, first: Int): [Item]! # 'items' can be found inside src/resolvers/Query
-    item(where: ItemWhereUniqueInput!): Item
-    itemsConnection(where: ItemWhereInput): ItemConnection!
-}                                           
+  items(where: ItemWhereInput, orderBy: ItemOrderByInput, skip: Int, first: Int): [Item]! # 'items' can be found inside src/resolvers/Query
+  item(where: ItemWhereUniqueInput!): Item
+  itemsConnection(where: ItemWhereInput): ItemConnection!
+  currentUser: User # not required because here must be no logged in user
+}
